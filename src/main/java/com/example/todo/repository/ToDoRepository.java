@@ -4,6 +4,7 @@ import com.example.todo.domain.ToDo;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.time.LocalDateTime;
@@ -12,6 +13,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+@Repository
 public class ToDoRepository implements CommonRepository<ToDo> {
 
     private static final String SQL_INSERT = "insert into todo (id," +
