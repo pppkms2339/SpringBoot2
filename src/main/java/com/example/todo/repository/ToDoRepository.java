@@ -100,4 +100,5 @@ public class ToDoRepository implements CommonRepository<ToDo> {
         toDo.setCompleted(rs.getBoolean("completed"));
         return toDo;
     };
+
 }
