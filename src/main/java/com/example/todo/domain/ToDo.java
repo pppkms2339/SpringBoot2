@@ -1,37 +1,40 @@
 package com.example.todo.domain;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.hibernate.annotations.GenericGenerator;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
-import java.util.UUID;
 
+@Entity
 @Data
+@NoArgsConstructor
 public class ToDo {
 
     @NotNull
+    @Id
+    @GeneratedValue(generator = "system-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid")
     private String id;
 
     @NotNull
     @NotBlank
     private String description;
 
+    @Column(insertable = true, updatable = false)
     private LocalDateTime created;
 
     private LocalDateTime updated;
 
-    private boolean completed;
-
-    public ToDo() {
-        LocalDateTime time = LocalDateTime.now();
-        created = time;
-        updated = time;
-        id = UUID.randomUUID().toString();
-    }
+    private boolean completedOfWork;
 
     public ToDo(String description) {
-        this();
         this.description = description;
     }
 
