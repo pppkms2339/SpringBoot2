@@ -1,0 +1,3 @@
+insert into to_do (id, description, created, updated, completed) values ('bfe697f4-ab10-11ec-b909-0242ac120002', 'qwerty', '2022-03-24 11:22:00.123', '2022-03-24 11:22:00.123', false);
+insert into to_do (id, description, created, updated, completed) values ('14dbda6c-ab11-11ec-b909-0242ac120002', 'qwerty2', '2022-03-24 11:23:00.123', '2022-03-24 11:23:00.123', true);
+insert into to_do (id, description, created, updated, completed) values ('1c0156dc-ab11-11ec-b909-0242ac120002', 'qwerty3', '2022-03-24 11:24:00.123', '2022-03-24 11:24:00.123', false);

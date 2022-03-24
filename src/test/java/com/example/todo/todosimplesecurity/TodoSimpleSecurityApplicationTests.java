@@ -1,10 +1,10 @@
-package com.example.todo;
+package com.example.todo.todosimplesecurity;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TodoInMemoryApplicationTests {
+class TodoSimpleSecurityApplicationTests {
 
 	@Test
 	void contextLoads() {

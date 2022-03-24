@@ -1,13 +1,13 @@
-package com.example.todo;
+package com.example.todo.todosimplesecurity;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TodoInMemoryApplication {
+public class TodoSimpleSecurityApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TodoInMemoryApplication.class, args);
+		SpringApplication.run(TodoSimpleSecurityApplication.class, args);
 	}
 
 }
