@@ -1,13 +1,13 @@
-package com.example.todo.todosimplesecurity;
+package com.example.directory.directory;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TodoSimpleSecurityApplication {
+public class DirectoryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TodoSimpleSecurityApplication.class, args);
+		SpringApplication.run(DirectoryApplication.class, args);
 	}
 
 }

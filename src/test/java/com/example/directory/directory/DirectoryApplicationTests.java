@@ -1,10 +1,10 @@
-package com.example.todo.todosimplesecurity;
+package com.example.directory.directory;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TodoSimpleSecurityApplicationTests {
+class DirectoryApplicationTests {
 
 	@Test
 	void contextLoads() {

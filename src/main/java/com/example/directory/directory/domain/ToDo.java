@@ -1,4 +1,4 @@
-package com.example.todo.todosimplesecurity.domain;
+package com.example.directory.directory.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
