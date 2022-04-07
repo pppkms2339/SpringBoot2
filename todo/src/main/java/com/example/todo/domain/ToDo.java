@@ -1,4 +1,4 @@
-package com.example.directory.directory.domain;
+package com.example.todo.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
