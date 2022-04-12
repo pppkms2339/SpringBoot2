@@ -1,23 +1,18 @@
-package com.example.todo.domain;
+package com.example.todo.todooauth2.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.GenericGenerator;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
 
 @Entity
 @Data
-@NoArgsConstructor
 public class ToDo {
 
-    @NotNull
     @Id
     @GeneratedValue(generator = "system-uuid")
     @GenericGenerator(name = "system-uuid", strategy = "uuid")
@@ -32,10 +27,22 @@ public class ToDo {
 
     private LocalDateTime updated;
 
-    private boolean completedOfWork;
+    private boolean completed;
+
+    public ToDo() {}
 
     public ToDo(String description) {
         this.description = description;
     }
 
+    @PrePersist
+    void onCreate() {
+        this.setCreated(LocalDateTime.now());
+        this.setUpdated(LocalDateTime.now());
+    }
+
+    @PreUpdate
+    void onUpdate() {
+        this.setUpdated(LocalDateTime.now());
+    }
 }

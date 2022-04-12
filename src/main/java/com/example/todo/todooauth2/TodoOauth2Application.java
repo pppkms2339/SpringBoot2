@@ -1,13 +1,13 @@
-package com.example.todo;
+package com.example.todo.todooauth2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TodoInMemoryApplication {
+public class TodoOauth2Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TodoInMemoryApplication.class, args);
+		SpringApplication.run(TodoOauth2Application.class, args);
 	}
 
 }
