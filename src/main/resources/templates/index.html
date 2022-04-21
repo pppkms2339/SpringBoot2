@@ -79,7 +79,6 @@
                             <p th:text="${element.key.name}"></p>
                         </div>
                         <div>
-<!--                            <div class="product" th:each="prod : ${element.value}" th:attr="onclick=|window.location.href='product/' + ${prod.id}|">-->
                             <div class="product" th:each="prod : ${element.value}" th:attr="onclick=|window.location.href='product?id=' + ${prod.id}|">
                                 <img class="triangle" th:src="@{/images/New.png}" alt="new" th:if="${prod.newProduct} == true">
                                 <img class="triangle" th:src="@{/images/Hot.png}" alt="hot" th:if="${prod.hotProduct} == true">
