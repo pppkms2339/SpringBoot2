@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
@@ -42,5 +44,26 @@ public class MainController {
         return "product";
     }
 
+    @GetMapping("/productTypeList")
+    public String productTypeList(Model model) {
+        model.addAttribute("list", productTypeRepository.findAll());
+        return "productTypeList";
+    }
+
+    // Для демонстрации передачи параметров в запросе, сделаем здесь через
+    // PathVariable
+    @GetMapping("/productTypeList/delete/{productTypeId}")
+    public String productTypeListDelete(@PathVariable("productTypeId") long id, Model model) {
+        productTypeRepository.deleteById(id);
+        model.addAttribute("list", productTypeRepository.findAll());
+        return "productTypeList";
+    }
+
+    @GetMapping("/productTypeList/add")
+    public String productTypeListAdd(Model model) {
+        ProductType productType = new ProductType();
+        model.addAttribute("productType", productType);
+        return "productTypeForm";
+    }
 
 }

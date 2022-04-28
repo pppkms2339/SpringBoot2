@@ -1,6 +1,8 @@
 package com.example.thymeleaf.entity;
 
 import lombok.Data;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.annotations.Type;
 
 import javax.persistence.*;
@@ -34,6 +36,7 @@ public class Product {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="product_type_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private ProductType productType;
 
 }
